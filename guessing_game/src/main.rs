@@ -18,8 +18,8 @@ fn main() {
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_) => {
-                println!("Please enter a numer!");
+            Err(err) => {
+                println!("Please enter a numer! Error: {}", err);
                 continue;
             }
         };
